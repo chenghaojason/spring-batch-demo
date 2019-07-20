@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/batch
+       http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+
+    <!-- 事务管理配置 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- job调度器 -->
+    <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository"/>
+        <property name="taskExecutor" ref="taskExecutor"/>
+    </bean>
+
+    <!-- job仓库 -->
+    <bean id="jobRepository" class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="lobHandler">
+            <bean class="org.springframework.jdbc.support.lob.DefaultLobHandler"/>
+        </property>
+    </bean>
+
+    <!-- 线程池 -->
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="32"/>
+        <property name="keepAliveSeconds" value="300"/>
+        <property name="maxPoolSize" value="256"/>
+        <property name="queueCapacity" value="0"/>
+    </bean>
+
+    <bean id="jobExplorer" class="org.springframework.batch.core.explore.support.JobExplorerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="jobRegistry" class="org.springframework.batch.core.configuration.support.MapJobRegistry"/>
+    <bean id="jobOperator" class="org.springframework.batch.core.launch.support.SimpleJobOperator">
+        <property name="jobLauncher" ref="jobLauncher"/>
+        <property name="jobRegistry" ref="jobRegistry"/>
+        <property name="jobExplorer" ref="jobExplorer"/>
+        <property name="jobRepository" ref="jobRepository"/>
+    </bean>
+
+    <bean id="cleanStep" class="com.jason.batch.common.config.CleanStep" scope="step"/>
+    <bean id="skipLinesCallbackHandler" class="com.jason.batch.common.config.SkippedLinesCallbackConfig" scope="step"/>
+
+</beans>
