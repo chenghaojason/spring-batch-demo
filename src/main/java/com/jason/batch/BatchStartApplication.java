@@ -13,6 +13,6 @@ public class BatchStartApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BatchStartApplication.class, args);
-        logger.info(">>>>>>>>>>>>>>>> 跑批项目启动成功 <<<<<<<<<<<<<<<<<<<<");
+        logger.info(">>>>>>>>>>>>>>>> 跑批项目启动成功 <<<<<<<<<<<<<<<<<<<<<<<<<");
     }
 }
