@@ -1,4 +1,4 @@
-package com.jason.batch.project.job.job;
+package com.jason.batch.project.job.personjob;
 
 import org.apache.log4j.Logger;
 import org.springframework.batch.item.ItemWriter;

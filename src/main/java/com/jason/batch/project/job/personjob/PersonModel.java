@@ -1,4 +1,4 @@
-package com.jason.batch.project.job.job;
+package com.jason.batch.project.job.personjob;
 
 public class PersonModel {
     private String name;
