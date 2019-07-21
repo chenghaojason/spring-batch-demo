@@ -24,7 +24,7 @@
         <property name="encoding" value="UTF-8"/>
         <property name="linesToSkip" value="1"/>
         <property name="skippedLinesCallback" ref="skipLinesCallbackHandler"/>
-        <property name="strict" value="false"/>
+        <property name="strict" value="false"/><!-- 严格模式，输入文件不存在会抛出异常，阻断当前job;默认为true -->
         <property name="lineMapper" ref="lineMapper"/>
     </bean>
 

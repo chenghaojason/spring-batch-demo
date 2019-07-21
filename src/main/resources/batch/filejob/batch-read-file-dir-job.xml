@@ -30,7 +30,7 @@
     <bean id="goodsFileReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
         <property name="resource" value="file:D:/test/batch-file/goods_list_20190720"/>
         <property name="encoding" value="UTF-8"/>
-        <property name="linesToSkip" value="1"/><!-- 表示跳过文件的第一行 -->
+        <property name="linesToSkip" value="1"/><!-- 表示跳过文件的第一行,一般我们处理文件有表头的，都会忽略的 -->
         <property name="skippedLinesCallback" ref="skipLinesCallbackHandler"/><!-- 处理跳过的数据 -->
         <property name="strict" value="false"/>
         <property name="lineMapper">

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+    <!-- 读取flat文件（定长文件）方式三 -->
+    <!-- 文件在fiels目录下面 -->
+    <batch:job id="readMusicFileJob">
+        <batch:step id="checkMusicFileStep" next="readMusicFileStep">
+            <batch:tasklet ref="checkMusicFileTasklet"/>
+        </batch:step>
+        <batch:step id="readMusicFileStep" next="readMusicFileCleanStep">
+            <batch:tasklet>
+                <batch:chunk reader="musicFileReader" processor="musicFileProcessor" writer="musicFileWrite" commit-interval="10"/>
+        </batch:tasklet>
+        </batch:step>
+        <batch:step id="readMusicFileCleanStep">
+            <batch:tasklet ref="cleanStep"/>
+        </batch:step>
+    </batch:job>
+
+    <bean id="checkMusicFileTasklet" class="com.jason.batch.common.config.CheckFile" scope="step">
+        <property name="resource" value="classpath:fiels/music_list_20190721"/>
+    </bean>
+
+    <bean id="musicFileReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
+        <property name="resource" value="classpath:fiels/music_list_20190721"/>
+        <property name="encoding" value="UTF-8"/>
+        <property name="linesToSkip" value="1"/><!-- 表示跳过文件的第一行,一般我们处理文件有表头的，都会忽略的 -->
+        <property name="skippedLinesCallback" ref="skipLinesCallbackHandler"/><!-- 处理跳过的数据 -->
+        <property name="strict" value="false"/>
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean class="org.springframework.batch.item.file.transform.FixedLengthTokenizer"><!-- 读取定长文件 -->
+                        <property name="names" value="musicName,singer,duration,album"/>
+                        <property name="columns" value="1-35,36-55,56-65,66-95"/>
+                    </bean>
+                </property>
+                <property name="fieldSetMapper">
+                    <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+                        <property name="targetType" value="com.jason.batch.project.job.fixlength.MusicModel"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="musicFileProcessor" class="com.jason.batch.project.job.fixlength.MusicProcessor" scope="step"/>
+    <bean id="musicFileWrite" class="com.jason.batch.project.job.fixlength.MusicWrite" scope="step"/>
+
+</beans>
