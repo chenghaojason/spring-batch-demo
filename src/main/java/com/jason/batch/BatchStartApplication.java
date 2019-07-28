@@ -11,8 +11,8 @@ import org.springframework.context.annotation.PropertySource;
 @ImportResource(locations = {
         "classpath:batch/*.xml",
         "classpath:batch/testBatch/*.xml",
-        "classpath:batch/filejob/*.xml",
-        "classpath:batch/sqljob/*.xml"})
+        "classpath:batch/readfilejob/*.xml",
+        "classpath:batch/readsqljob/*.xml"})
 @PropertySource(value="classpath:application-jobsql.properties")
 public class BatchStartApplication {
     public static Logger logger = LoggerFactory.getLogger(BatchStartApplication.class);
