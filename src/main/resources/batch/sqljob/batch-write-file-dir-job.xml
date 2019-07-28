@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+
+    <!-- 读数据库MySql,并写到本地的文件中-->
+    <batch:job id="readFilmsSqlToFileJob">
+
+        <batch:step id="readFilmsSqlToFileStep" next="readFilmsSqlToFileCleanStep">
+            <batch:tasklet>
+                <batch:chunk reader="filmToFileReader" processor="filmToFileProcessor" writer="filmToFileWrite" commit-interval="1000"/>
+        </batch:tasklet>
+        </batch:step>
+        <batch:step id="readFilmsSqlToFileCleanStep">
+            <batch:tasklet ref="cleanStep"/>
+        </batch:step>
+    </batch:job>
+
+    <!-- 读操作 -->
+    <bean id="filmToFileReader" class="org.springframework.batch.item.database.JdbcCursorItemReader" scope="step">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="sql" value="${queryfilmSql}"/>
+        <property name="rowMapper">
+            <bean class="org.springframework.jdbc.core.BeanPropertyRowMapper">
+                <property name="mappedClass" value="com.jason.batch.project.job.jdbcjob.FilmModel"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- 处理操作 -->
+    <bean id="filmToFileProcessor" class="com.jason.batch.project.job.jdbcjob.FilmProcessor" scope="step"/>
+
+    <!-- 写操作 -->
+    <bean id="filmToFileWrite" class="org.springframework.batch.item.file.FlatFileItemWriter" scope="step">
+        <property name="resource" value="file:D:/test/batch-file/film-20190720.csv"/>
+        <property name="encoding" value="GBK"/>
+        <property name="lineAggregator">
+            <bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+                <property name="fieldExtractor">
+                    <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+                        <property name="names" value="${filmColnum}"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

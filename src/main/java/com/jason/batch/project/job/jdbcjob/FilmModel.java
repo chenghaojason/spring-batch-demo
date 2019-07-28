@@ -56,4 +56,16 @@ public class FilmModel {
     public void setScore(String score) {
         this.score = score;
     }
+
+    @Override
+    public String toString() {
+        return "FilmModel{" +
+                "filmName='" + filmName + '\'' +
+                ", director='" + director + '\'' +
+                ", timeLength='" + timeLength + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
+                ", personNum='" + personNum + '\'' +
+                ", score='" + score + '\'' +
+                '}';
+    }
 }
