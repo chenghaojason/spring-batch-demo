@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+
+    <!-- 读数据库MySql,只读数据，不进行任何逻辑处理，也不把数据写出来-->
+    <batch:job id="readFilmsSqlJob">
+
+        <batch:step id="readFilmsSqlStep" next="readFilmsSqlCleanStep">
+            <batch:tasklet>
+                <batch:chunk reader="filmReader" processor="filmProcessor" writer="filmWrite" commit-interval="1000"/>
+        </batch:tasklet>
+        </batch:step>
+        <batch:step id="readFilmsSqlCleanStep">
+            <batch:tasklet ref="cleanStep"/>
+        </batch:step>
+    </batch:job>
+
+    <bean id="filmReader" class="org.springframework.batch.item.database.JdbcCursorItemReader" scope="step">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="sql" value="${queryfilmSql}"/>
+        <property name="rowMapper">
+            <bean class="org.springframework.jdbc.core.BeanPropertyRowMapper">
+                <property name="mappedClass" value="com.jason.batch.project.job.jdbcjob.FilmModel"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="filmProcessor" class="com.jason.batch.project.job.jdbcjob.FilmProcessor" scope="step"/>
+    <bean id="filmWrite" class="com.jason.batch.project.job.jdbcjob.FilmWrite" scope="step"/>
+
+</beans>
