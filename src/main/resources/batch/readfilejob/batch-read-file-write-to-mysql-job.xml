@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+
+    <!-- 读取本地文件将数据写到数据库 -->
+    <batch:job id="importGoodsInfoJob">
+        <batch:step id="checkGoodsFileStep" next="importGoodsInfoStep">
+            <batch:tasklet ref="checkGoodsInfoTasklet"/>
+        </batch:step>
+        <batch:step id="importGoodsInfoStep">
+            <batch:tasklet>
+                <batch:chunk reader="importGoodsInfoReader" processor="importGoodsInfoProcess"
+                             writer="importGoodsInfoWrite" commit-interval="100"/>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <bean id="checkGoodsInfoTasklet" class="com.jason.batch.common.config.CheckFile" scope="step">
+        <property name="path" value="D:/test/batch-file/goods_list_info_20190803"/>
+    </bean>
+
+    <!-- 读 -->
+    <bean id="importGoodsInfoReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
+        <property name="resource" value="file:D:/test/batch-file/goods_list_info_20190803"/>
+        <property name="encoding" value="UTF-8"/>
+        <property name="linesToSkip" value="1"/>
+        <property name="skippedLinesCallback" ref="skipLinesCallbackHandler"/>
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="delimiter" value=","/>
+                        <property name="names" value="${goodsListColnum}"/>
+                    </bean>
+                </property>
+                <property name="fieldSetMapper">
+                    <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+                        <property name="targetType" value="com.jason.batch.project.job.goodsinfo.GoodsListModel"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- 操作 -->
+    <bean id="importGoodsInfoProcess" class="com.jason.batch.project.job.goodsinfo.GoodsListProcess" scope="step"/>
+
+    <!-- 写 -->
+    <!-- sql中有命名参数的-->
+<!--    <bean id="importGoodsInfoWrite" class="org.springframework.batch.item.database.JdbcBatchItemWriter" scope="step">-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--        <property name="sql" value="${goodsInsertSql}"/>-->
+<!--        <property name="itemSqlParameterSourceProvider">-->
+<!--            <bean class="org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider"/>-->
+<!--        </property>-->
+<!--    </bean>-->
+    <!-- sql中有？的参数-->
+    <bean id="importGoodsInfoWrite" class="org.springframework.batch.item.database.JdbcBatchItemWriter" scope="step">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="sql" value="${goodsInsertSqlTwo}"/>
+        <property name="itemPreparedStatementSetter" >
+            <bean class="com.jason.batch.project.job.goodsinfo.GoodsListItemPreparedStatementSetter"/>
+        </property>
+    </bean>
+
+</beans>
