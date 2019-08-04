@@ -1,6 +1,6 @@
 package com.jason.batch.project.job.goodsinfo;
 
-import org.apache.commons.lang.time.DateUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.apache.log4j.Logger;
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;
 
@@ -17,7 +17,7 @@ public class GoodsListItemPreparedStatementSetter implements ItemPreparedStateme
         try {
             preparedStatement.setString(1, goodsListModel.getId());
             preparedStatement.setString(2, goodsListModel.getCreateUser());
-            preparedStatement.setDate(3, new Date(DateUtils.parseDate(goodsListModel.getCreateTime(), new String[]{"yyyy-MM-dd"}).getTime()));
+            preparedStatement.setDate(3, new Date(DateUtils.parseDate(goodsListModel.getCreateTime(), "yyyy-MM-dd").getTime()));
             preparedStatement.setString(4, goodsListModel.getGoodsName());
             preparedStatement.setInt(5, Integer.valueOf((int) goodsListModel.getGoodsCount()));
             preparedStatement.setDouble(6, Double.valueOf(goodsListModel.getGoodsPrice()));

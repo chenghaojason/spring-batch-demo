@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7165e67-b8e3-4cc9-adda-cc98f3292bc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-jobsql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-jobsql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,20 +24,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+            <state relative-caret-position="432">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application-jobsql.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CleanStep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="17" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="72">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/DataSourceConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/SkippedLinesCallbackConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/utils/SpringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -91,8 +126,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/job/PersonModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/job/PersonWrite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/job/TestFileProgessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/fiels/file-20190720" />
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/dirjob/GoodsModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/dirjob/GoodsProcessor.java" />
@@ -106,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/fixlength/MusicWrite.java" />
         <option value="$PROJECT_DIR$/src/main/resources/batch/filejob/batch-read-fixedLength-file-job.xml" />
         <option value="$PROJECT_DIR$/target/classes/fiels/music_list_20190721" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/jdbcjob/FilmWrite.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/batch/sqljob/batch-read-sql-job.xml" />
@@ -120,8 +152,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListProcess.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-jobsql.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" />
       </list>
     </option>
   </component>
@@ -150,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -192,7 +226,46 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-batch-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-batch-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-batch-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-batch-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-batch-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-batch-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-batch-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-batch-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-batch-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -237,10 +310,19 @@
               <item name="batch" type="462c0819:PsiDirectoryNode" />
               <item name="readsqljob" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-batch-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-batch-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fiels" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,19 +334,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\fiels" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\Design Notes\sql" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\sqljob" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\filejob" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jason.batch.common.config" />
       <recent name="com.jason.batch" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\Design Notes\sql" />
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\sqljob" />
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\fiels" />
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\filejob" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -387,14 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564814771986</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="读本地文件到数据库">
+      <created>1564836946560</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1564836946560</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56684494" visible="true" weight="0.21849866" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.56684494" visible="true" weight="0.22117962" />
       <window_info id="Structure" order="1" sideWeight="0.4331551" side_tool="true" weight="0.22922252" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -431,23 +520,10 @@
     <MESSAGE value="读数据库中的数据,并写到本地文件中" />
     <MESSAGE value="更改文件名" />
     <MESSAGE value="添加项目说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加项目说明" />
+    <MESSAGE value="读本地文件到数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="读本地文件到数据库" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-infrastructure/4.0.1.RELEASE/spring-batch-infrastructure-4.0.1.RELEASE.jar!/org/springframework/batch/item/database/JdbcCursorItemReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="17" column="58" lean-forward="true" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-core/4.0.1.RELEASE/spring-batch-core-4.0.1.RELEASE.jar!/batch-oracle.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -462,13 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -496,34 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CleanStep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/DataSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/SkippedLinesCallbackConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/utils/SpringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -541,9 +582,7 @@
     <entry file="file://$PROJECT_DIR$/spring-batch-demo.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Spring-Batch-Demo-README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Spring-Batch-Demo-README.md" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -565,13 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="83" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="17" column="21" selection-start-line="17" selection-end-line="79" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -638,16 +670,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListWrite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListWrite.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-infrastructure/4.0.1.RELEASE/spring-batch-infrastructure-4.0.1.RELEASE.jar!/org/springframework/batch/item/file/mapping/BeanWrapperFieldSetMapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -728,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-jobsql.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="17" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/java/jdk-1.8/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -767,20 +783,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="489">
+          <caret line="66" column="84" selection-start-line="66" selection-start-column="84" selection-end-line="66" selection-end-column="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fiels/goods_list_info_20190803">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-jobsql.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        <state relative-caret-position="108">
+          <caret line="6" column="17" selection-start-line="6" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CleanStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/DataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/SkippedLinesCallbackConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/common/utils/SpringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>
