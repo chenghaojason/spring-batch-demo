@@ -1,10 +1,12 @@
 package com.jason.batch.project.job.fixlength;
 
 public class MusicModel {
-    //musicName,singer,duration,album
     private String musicName;
     private String singer;
-    private String duration;//时长
+    /**
+     * 时长
+     */
+    private String duration;
     private String album;
 
     public String getMusicName() {

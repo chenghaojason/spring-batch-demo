@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 
+/**
+ * @author Administrator
+ */
 @SpringBootApplication
 @ImportResource(locations = {
         "classpath:batch/*.xml",

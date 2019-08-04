@@ -1,7 +1,6 @@
 package com.jason.batch.project.job.jdbcjob;
 
 public class FilmModel {
-    //filmName,director,timeLength,releaseDate,personNum,score
     private String filmName;
     private String director;
     private String timeLength;

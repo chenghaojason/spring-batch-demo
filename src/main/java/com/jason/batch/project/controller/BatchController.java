@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+/**
+ * @author wangchengjason
+ */
 @RestController
 @RequestMapping("/jobHome")
 public class BatchController {

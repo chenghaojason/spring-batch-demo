@@ -13,6 +13,8 @@ import java.io.File;
 
 /**
  * 校验文件是否存在
+ * @author Administrator
+ * @date 2019-08-04
  */
 public class CheckFile implements Tasklet {
 
