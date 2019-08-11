@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+
+    <!-- 读数据库MySql,并写到本地 多个文件 -->
+    <batch:job id="readFilmsSqlToMultiFileJob">
+        <batch:step id="readFilmsSqlToMultiFileStep" next="readFilmsSqlToMultiFileCleanStep">
+            <batch:tasklet>
+                <batch:chunk reader="filmToMultiFileReader"
+                             processor="filmToMultiFileProcessor"
+                             writer="filmToMultiFileWrite"
+                             commit-interval="50"/>
+            </batch:tasklet>
+        </batch:step>
+        <batch:step id="readFilmsSqlToMultiFileCleanStep">
+            <batch:tasklet ref="cleanStep"/>
+        </batch:step>
+    </batch:job>
+
+    <!-- 读操作 -->
+    <bean id="filmToMultiFileReader" class="org.springframework.batch.item.database.JdbcCursorItemReader" scope="step">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="sql" value="${queryfilmSql}"/>
+        <property name="rowMapper">
+            <bean class="org.springframework.jdbc.core.BeanPropertyRowMapper">
+                <property name="mappedClass" value="com.jason.batch.project.job.jdbcjob.FilmModel"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- 处理操作 -->
+    <bean id="filmToMultiFileProcessor" class="com.jason.batch.project.job.jdbcjob.FilmProcessor" scope="step"/>
+
+    <!-- 写操作 -->
+    <bean id="filmToMultiFileWrite" class="org.springframework.batch.item.file.MultiResourceItemWriter" scope="step">
+        <property name="resource" value="file:D:/test/batch-file/film-20190811"/>
+        <property name="itemCountLimitPerResource" value="10"/><!-- 注意：这个值一定要小于等于 commit-interval 的值 -->
+        <!-- 自定义文件后缀，也可以不配置，使用默认的 -->
+        <property name="resourceSuffixCreator">
+            <bean class="com.jason.batch.project.job.jdbcjob.FilmsResourceSuffixCreator"/>
+        </property>
+        <property name="delegate">
+            <bean class="org.springframework.batch.item.file.FlatFileItemWriter">
+                <property name="encoding" value="UTF-8"/>
+                <property name="lineAggregator">
+                    <bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+                        <property name="fieldExtractor">
+                            <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+                                <property name="names" value="${filmColnum}"/>
+                            </bean>
+                        </property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+</beans>

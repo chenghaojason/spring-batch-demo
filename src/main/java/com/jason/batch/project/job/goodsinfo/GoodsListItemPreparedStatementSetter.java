@@ -19,8 +19,8 @@ public class GoodsListItemPreparedStatementSetter implements ItemPreparedStateme
             preparedStatement.setString(2, goodsListModel.getCreateUser());
             preparedStatement.setDate(3, new Date(DateUtils.parseDate(goodsListModel.getCreateTime(), "yyyy-MM-dd").getTime()));
             preparedStatement.setString(4, goodsListModel.getGoodsName());
-            preparedStatement.setInt(5, Integer.valueOf((int) goodsListModel.getGoodsCount()));
-            preparedStatement.setDouble(6, Double.valueOf(goodsListModel.getGoodsPrice()));
+            preparedStatement.setInt(5, (int) goodsListModel.getGoodsCount());
+            preparedStatement.setDouble(6, goodsListModel.getGoodsPrice());
             preparedStatement.setString(7, goodsListModel.getGoodsDec());
             preparedStatement.setString(8, goodsListModel.getResource());
             preparedStatement.setString(9, goodsListModel.getGoodsType());

@@ -21,7 +21,7 @@ import java.util.Date;
 @RequestMapping("/jobHome")
 public class BatchController {
 
-    public static Logger logger = Logger.getLogger(BatchController.class);
+    public static final Logger logger = Logger.getLogger(BatchController.class);
 
 
     @GetMapping("/startJob")
@@ -36,7 +36,7 @@ public class BatchController {
         parametersBuilder.addString("jobName", jobName);
         parametersBuilder.addDate("jobStartTime",new Date());
         JobParameters jobParameters = parametersBuilder.toJobParameters();
-        JobExecution run = null;
+        JobExecution run;
         try {
             run = jobLauncher.run(job, jobParameters);
             logger.info("JOB执行信息：" + run.getJobInstance());
