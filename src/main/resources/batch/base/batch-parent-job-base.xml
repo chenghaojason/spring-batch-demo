@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下午4:14:48 Author:Administrator -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/batch
+       http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+
+    <!-- 清理批 -->
+    <bean id="cleanStep" class="com.jason.batch.common.config.CleanStep" scope="step"/>
+    <!-- 行跳过回调操作 -->
+    <bean id="skipLinesCallbackHandler" class="com.jason.batch.common.config.SkippedLinesCallbackConfig" scope="step"/>
+
+</beans>

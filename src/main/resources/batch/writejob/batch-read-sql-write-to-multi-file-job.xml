@@ -39,7 +39,7 @@
 
     <!-- 写操作 -->
     <bean id="filmToMultiFileWrite" class="org.springframework.batch.item.file.MultiResourceItemWriter" scope="step">
-        <property name="resource" value="file:D:/test/batch-file/film-20190811"/>
+        <property name="resource" value="file:D:/test/batch-file/film-20190811"/><!-- 注意：这个文件的父目录一定要存在，否则报错 -->
         <property name="itemCountLimitPerResource" value="10"/><!-- 注意：这个值一定要小于等于 commit-interval 的值 -->
         <!-- 自定义文件后缀，也可以不配置，使用默认的 -->
         <property name="resourceSuffixCreator">

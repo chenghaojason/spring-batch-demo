@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7165e67-b8e3-4cc9-adda-cc98f3292bc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/dao/GoodsListDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/jdbcjob/FilmsResourceSuffixCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-write-to-multi-file-job.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/goods_list_mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/batch/base/batch-parent-job-base.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-batch-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/test/FirstTasklet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/tasklet/FirstTasklet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/batch-base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/base/batch-base.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-dir-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-file-dir-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-file-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/writejob/batch-read-file-write-to-mysql-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-fixedLength-file-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-fixedLength-file-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-read-sql-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-sql-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-write-file-dir-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/writejob/batch-read-sql-write-to-file-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-write-to-multi-file-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/writejob/batch-read-sql-write-to-multi-file-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/testBatch/batch-test-01-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/taskletjob/batch-test-01-job.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +41,12 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="MySQL for 5.1 - mysql@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL for 5.1 - mysql@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="batch-test: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -86,9 +95,10 @@
     <property name="MyBatisLogPluginpreparing" value="Preparing:" />
     <property name="MyBatisLogPluginrunning" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/batch/readsqljob" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/batch/base" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -101,19 +111,22 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\readsqljob" />
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\base" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\readjob" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\writejob" />
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\fiels" />
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\Design Notes\sql" />
-      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\sqljob" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jason.batch.common.config" />
       <recent name="com.jason.batch" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\base" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\readsqljob" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\mapper" />
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\fiels" />
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\Design Notes\sql" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -158,11 +171,22 @@
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
+        <option name="contentProportion" value="0.14129692" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7ea74884" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@40cac24b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@40cac24b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7b1af918" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@40cac24b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2754c4af" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -182,7 +206,8 @@
       <updated>1561196069783</updated>
       <workItem from="1565411433715" duration="8152000" />
       <workItem from="1565447789993" duration="3210000" />
-      <workItem from="1565492358674" duration="8721000" />
+      <workItem from="1565492358674" duration="10552000" />
+      <workItem from="1565696340265" duration="3363000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1563625229578</created>
@@ -282,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564914462117</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="导出到多个文件">
+      <created>1565521532302</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1565521532302</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +345,7 @@
     <MESSAGE value="读本地文件到数据库" />
     <MESSAGE value="更改工具包" />
     <MESSAGE value="简洁代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="简洁代码" />
+    <MESSAGE value="导出到多个文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="导出到多个文件" />
   </component>
 </project>
