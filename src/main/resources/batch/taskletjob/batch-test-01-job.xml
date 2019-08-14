@@ -8,13 +8,11 @@
        http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
 
     <bean id="tasklet_01_01" class="com.jason.batch.project.job.tasklet.FirstTasklet" scope="step"/>
-    <batch:job id="test_01_job">
-        <batch:step id="step_01_01">
+    <batch:job id="test_01_job" parent="paranetJob">
+        <batch:step id="step_01_01" parent="paranetStep">
             <batch:tasklet ref="tasklet_01_01"/>
         </batch:step>
     </batch:job>
-
-
 
 
 </beans>

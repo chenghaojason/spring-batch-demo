@@ -16,9 +16,9 @@ import org.springframework.context.annotation.PropertySource;
         "classpath:batch/taskletjob/*.xml",
         "classpath:batch/readjob/*.xml",
         "classpath:batch/writejob/*.xml"})
-@PropertySource(value="classpath:application-jobsql.properties")
+@PropertySource(value = "classpath:application-jobsql.properties")
 public class BatchStartApplication {
-    public static Logger logger = LoggerFactory.getLogger(BatchStartApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(BatchStartApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(BatchStartApplication.class, args);

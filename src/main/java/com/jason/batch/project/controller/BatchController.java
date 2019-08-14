@@ -2,7 +2,8 @@ package com.jason.batch.project.controller;
 
 import com.jason.batch.common.utils.SpringUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameters;
@@ -21,7 +22,7 @@ import java.util.Date;
 @RequestMapping("/jobHome")
 public class BatchController {
 
-    public static final Logger logger = Logger.getLogger(BatchController.class);
+    public static final Logger logger = LoggerFactory.getLogger(BatchController.class);
 
 
     @GetMapping("/startJob")
@@ -34,14 +35,14 @@ public class BatchController {
 
         JobParametersBuilder parametersBuilder = new JobParametersBuilder();
         parametersBuilder.addString("jobName", jobName);
-        parametersBuilder.addDate("jobStartTime",new Date());
+        parametersBuilder.addDate("jobStartTime", new Date());
         JobParameters jobParameters = parametersBuilder.toJobParameters();
         JobExecution run;
         try {
             run = jobLauncher.run(job, jobParameters);
-            logger.info("JOB执行信息：" + run.getJobInstance());
+            logger.info("JOB执行信息：[{}]", run.getJobInstance());
         } catch (Exception e) {
-            logger.error("job执行失败：【{}】", e);
+            logger.error("job执行失败:", e);
             return "响应失败";
         }
         return "相应成功";

@@ -15,4 +15,22 @@
     <!-- 行跳过回调操作 -->
     <bean id="skipLinesCallbackHandler" class="com.jason.batch.common.config.SkippedLinesCallbackConfig" scope="step"/>
 
+    <!-- 配置步step监听器 -->
+    <bean id="stepLinstener" class="com.jason.batch.common.config.StepJasonExecutionListener"/>
+
+    <bean id="jobListener" class="com.jason.batch.common.config.JobListenerConfig"/>
+
+    <!-- 配置父step -->
+    <batch:step id="paranetStep" abstract="true">
+        <batch:listeners>
+            <batch:listener ref="stepLinstener"/>
+        </batch:listeners>
+    </batch:step>
+
+    <!-- 配置父job -->
+    <batch:job id="paranetJob" abstract="true">
+        <batch:listeners>
+            <batch:listener ref="jobListener"/>
+        </batch:listeners>
+    </batch:job>
 </beans>

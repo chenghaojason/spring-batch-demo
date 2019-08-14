@@ -1,7 +1,8 @@
 package com.jason.batch.project.job.goodsinfo;
 
 import org.apache.commons.lang3.time.DateUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.database.ItemPreparedStatementSetter;
 
 import java.sql.Date;
@@ -10,7 +11,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 
 public class GoodsListItemPreparedStatementSetter implements ItemPreparedStatementSetter<GoodsListModel> {
-    private static final Logger logger = Logger.getLogger(GoodsListItemPreparedStatementSetter.class);
+    private static final Logger logger= LoggerFactory.getLogger(GoodsListItemPreparedStatementSetter.class);
 
     @Override
     public void setValues(GoodsListModel goodsListModel, PreparedStatement preparedStatement) throws SQLException {

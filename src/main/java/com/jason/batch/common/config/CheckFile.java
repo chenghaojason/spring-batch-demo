@@ -1,7 +1,8 @@
 package com.jason.batch.common.config;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
@@ -20,7 +21,7 @@ public class CheckFile implements Tasklet {
 
     private Resource resource;
 
-    private static final Logger LOGGER = Logger.getLogger(CheckFile.class);
+    private static final Logger logger= LoggerFactory.getLogger(CheckFile.class);
 
     private String path;
 
@@ -28,29 +29,29 @@ public class CheckFile implements Tasklet {
     public RepeatStatus execute(StepContribution stepContribution, ChunkContext chunkContext) throws Exception {
 
         if(StringUtils.isNotBlank(path)){
-            LOGGER.info("文件路径：" + path);
+            logger.info("文件路径：" + path);
         }
         if (this.resource != null) {
-            LOGGER.info("文件路径：" + this.resource.getURL());
+            logger.info("文件路径：[{}]" , this.resource.getURL());
         }
 
         if (null == this.resource && StringUtils.isEmpty(path)) {
-            LOGGER.info("请指定文件路径");
+            logger.info("请指定文件路径");
             return setRes(stepContribution);
         }
         if (null != this.resource && StringUtils.isNotBlank(this.path)) {
-            LOGGER.info("请指定一种文件配置路径");
+            logger.info("请指定一种文件配置路径");
             return setRes(stepContribution);
         }
         if (this.resource != null && !this.resource.exists()) {
-            LOGGER.info("配置的resource文件不存在");
+            logger.info("配置的resource文件不存在");
             return setRes(stepContribution);
         }
 
         if (StringUtils.isNotBlank(this.path)) {
             File file = new File(this.path);
             if (!file.exists()) {
-                LOGGER.info("配置的path文件不存在");
+                logger.info("配置的path文件不存在");
                 return setRes(stepContribution);
             }
         }

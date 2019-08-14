@@ -5,21 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7165e67-b8e3-4cc9-adda-cc98f3292bc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/batch/base/batch-parent-job-base.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/JobListenerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/StepJasonExecutionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/test/FirstTasklet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/tasklet/FirstTasklet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/batch-base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/base/batch-base.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-dir-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-file-dir-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-file-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-file-write-to-mysql-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/writejob/batch-read-file-write-to-mysql-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readfilejob/batch-read-fixedLength-file-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-fixedLength-file-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-read-sql-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/readjob/batch-read-sql-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-write-file-dir-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/writejob/batch-read-sql-write-to-file-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/readsqljob/batch-write-to-multi-file-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/writejob/batch-read-sql-write-to-multi-file-job.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/testBatch/batch-test-01-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/taskletjob/batch-test-01-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CheckFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CleanStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/CleanStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/SkippedLinesCallbackConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/SkippedLinesCallbackConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/controller/BatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/dirjob/GoodsWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/dirjob/GoodsWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/fixlength/MusicProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/fixlength/MusicProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/fixlength/MusicWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/fixlength/MusicWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListItemPreparedStatementSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/goodsinfo/GoodsListProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/jdbcjob/FilmWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/jdbcjob/FilmWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/personjob/PersonWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/personjob/PersonWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/tasklet/FirstTasklet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/project/job/tasklet/FirstTasklet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/base/batch-parent-job-base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/base/batch-parent-job-base.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/taskletjob/batch-test-01-job.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/taskletjob/batch-test-01-job.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch/batch-base.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/batch/testBatch/batch-test-01-job.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +73,7 @@
         <option value="spring-batch.xml" />
         <option value="mybatis-config" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -98,6 +108,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/batch/base" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -108,10 +119,11 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources" />
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\base" />
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\readjob" />
       <recent name="D:\IDEA-WorkSpace\Test-WorkSpace\spring-batch-demo\src\main\resources\batch\writejob" />
@@ -207,7 +219,9 @@
       <workItem from="1565411433715" duration="8152000" />
       <workItem from="1565447789993" duration="3210000" />
       <workItem from="1565492358674" duration="10552000" />
-      <workItem from="1565696340265" duration="3363000" />
+      <workItem from="1565696340265" duration="7907000" />
+      <workItem from="1565782510525" duration="165000" />
+      <workItem from="1565782703674" duration="2701000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1563625229578</created>
@@ -314,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565521532302</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="架构调整">
+      <created>1565701475371</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1565701475371</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +367,7 @@
     <MESSAGE value="更改工具包" />
     <MESSAGE value="简洁代码" />
     <MESSAGE value="导出到多个文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="导出到多个文件" />
+    <MESSAGE value="架构调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="架构调整" />
   </component>
 </project>
