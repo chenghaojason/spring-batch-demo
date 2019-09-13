@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7165e67-b8e3-4cc9-adda-cc98f3292bc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/common/config/JobJasonParametersValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/batch/base/batch-parent-job-base.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/batch/base/batch-parent-job-base.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +97,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -203,7 +200,8 @@
       <workItem from="1565696340265" duration="7907000" />
       <workItem from="1565782510525" duration="165000" />
       <workItem from="1565782703674" duration="7614000" />
-      <workItem from="1566608509034" duration="252000" />
+      <workItem from="1566608509034" duration="4260000" />
+      <workItem from="1568336587652" duration="3318000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1563625229578</created>
@@ -324,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565786682360</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="添加校验器">
+      <created>1566608802686</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1566608802686</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +363,7 @@
     <MESSAGE value="导出到多个文件" />
     <MESSAGE value="架构调整" />
     <MESSAGE value="更换日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="更换日志" />
+    <MESSAGE value="添加校验器" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加校验器" />
   </component>
 </project>
