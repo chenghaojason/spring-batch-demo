@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d7165e67-b8e3-4cc9-adda-cc98f3292bc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jason/batch/BatchStartApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +67,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\java\maven-3.5.0\repository" />
-        <option name="mavenHome" value="D:/java/maven-3.5.0" />
         <option name="userSettingsFile" value="D:\java\maven-3.5.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -87,7 +88,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/batch/base" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -97,7 +98,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -131,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BatchStartApplication">
+  <component name="RunManager" selected="JUnit.TestOther.test1">
     <configuration name="BatchStartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jason.batch.BatchStartApplication" />
       <module name="spring-batch-demo" />
@@ -145,6 +146,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestOther.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-batch-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestLL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestLL" />
+      <option name="MAIN_CLASS_NAME" value="TestLL.TestOther" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BatchStartApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-batch-demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.jason.batch.BatchStartApplication" />
@@ -154,6 +171,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestOther.test1" />
         <item itemvalue="Application.BatchStartApplication" />
       </list>
     </recent_temporary>
@@ -201,7 +219,9 @@
       <workItem from="1565782510525" duration="165000" />
       <workItem from="1565782703674" duration="7614000" />
       <workItem from="1566608509034" duration="4260000" />
-      <workItem from="1568336587652" duration="3318000" />
+      <workItem from="1568336587652" duration="7255000" />
+      <workItem from="1570283857828" duration="4433000" />
+      <workItem from="1570327389248" duration="3161000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1563625229578</created>
@@ -329,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566608802686</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="添加校验器">
+      <created>1568365760871</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1568365760871</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
