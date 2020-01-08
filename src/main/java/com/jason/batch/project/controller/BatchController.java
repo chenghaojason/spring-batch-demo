@@ -1,5 +1,7 @@
 package com.jason.batch.project.controller;
 
+import com.jason.batch.common.bean.request.BatchRequest;
+import com.jason.batch.common.bean.response.BatchResponse;
 import com.jason.batch.common.utils.SpringUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -26,10 +28,11 @@ public class BatchController {
 
 
     @GetMapping("/startJob")
-    public String startJob(String jobName) {
+    public BatchResponse startJob(BatchRequest request) {
+        String jobName = request.getJobName();
         JobLauncher jobLauncher = SpringUtil.getBean("jobLauncher", JobLauncher.class);
         if (StringUtils.isBlank(jobName)) {
-            return "请选择job";
+            return BatchResponse.error(jobName, "请选择job");
         }
         Job job = SpringUtil.getBean(jobName, Job.class);
 
@@ -43,8 +46,8 @@ public class BatchController {
             logger.info("JOB执行信息：[{}]", run.getJobInstance());
         } catch (Exception e) {
             logger.error("job执行失败:", e);
-            return "响应失败";
+            return BatchResponse.error(jobName, e.getMessage());
         }
-        return "相应成功";
+        return BatchResponse.success(jobName, run.getExitStatus().getExitCode(), run.getJobInstance().getInstanceId() + "");
     }
 }
