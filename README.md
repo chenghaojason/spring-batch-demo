@@ -1,5 +1,5 @@
 # spring-batch-demo
-对spring batch框架的一些使用demo
+<p>对spring batch框架的一些使用demo</p>
 项目说明：
 1.本项目主要是本人对spring-batch框架的一些练习代码demo。
 2.运行本项目之前请先在数据库创建spring-batch框架相应的表，创建sql语句在jar包中(本项目使用的是mysql)：
